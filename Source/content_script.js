@@ -38,13 +38,20 @@ function walk(node)
 function handleText(textNode) 
 {
 	var v = textNode.nodeValue;
+	const names = ["Meatball Ron", "Tiny D", "Puddin' Fingers", "Ron DaDouche", "Ronda Santis, Drag Queen Extraordinaire", "Pretty Boots Ron"];
+	const titles = ["Florida Man", "Meth Wrangler", "Less Exciting Trump"];
+	const descriptions = ["less interesting Patrick Batman", "man with the cutest wittle boots east of the Mississippi", "try-hard", "notorious Trump fellator"]
+	let whichRon = Math.floor(Math.random() * names.length);
+	let whichTitle = Math.floor(Math.random() * names.length);
 
-	v = v.replace(/\bThe Cloud\b/g, "My Butt");
-	v = v.replace(/\bThe cloud\b/g, "My butt");
-	v = v.replace(/\bthe Cloud\b/g, "my Butt");
-	v = v.replace(/\bthe cloud\b/g, "my butt");
-	
+	v = v.replace(/\bRon DeSantis\b/g, whichRon);
+	v = v.replace(/\bRon Desantis\b/g, whichRon);
+	v = v.replace(/\bGovernor Ron DeSantis\b/g, whichTitle);
+	v = v.replace(/\bFlorida governor\b/g, whichTitle);
+	v = v.replace(/\bRepublican\b/g, "Fascist");
 	textNode.nodeValue = v;
 }
+
+
 
 
