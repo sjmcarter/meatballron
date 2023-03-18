@@ -39,17 +39,25 @@ function handleText(textNode)
 {
 	var v = textNode.nodeValue;
 	const names = ["Meatball Ron", "Tiny D", "Puddin' Fingers", "Ron DaDouche", "Ronda Santis, Drag Queen Extraordinaire", "Pretty Boots Ron"];
-	const titles = ["Florida Man", "Meth Wrangler", "Less Exciting Trump"];
-	const descriptions = ["Boring Patrick Bateman", "man with the cutest wittle boots east of the Mississippi", "notorious Trump fellator", "mommie's most Specialist Boy", "Trump's FUPA rest"]
+	const titles = ["Florida Man", "Meth Wrangler", "Less Exciting Trump", "Psychopathic Swampman", "Florida Governor and sad little manchild"];
+	const descriptions = ["who thinks Gilead is a utopia", "who loves the poorly educated", "a boring Patrick Bateman", "man with the cutest wittle boots east of the Mississippi", "notorious Trump fellator", "Trump's FUPA rest"]
+	const terms = ["Fascist", "Hilter-Loving", "Neo-Nazi", "Putin-Fellator", "Pro-Slavery"];
 	let whichRon = Math.floor(Math.random() * names.length);
-	let whichTitle = Math.floor(Math.random() * names.length);
-
-	v = v.replace(/\bRon DeSantis\b/g, whichRon);
-	v = v.replace(/\bRon Desantis\b/g, whichRon);
-	v = v.replace(/\bDeSantis\b/g, whichRon);
-	v = v.replace(/\bGovernor Ron DeSantis\b/g, whichTitle);
-	v = v.replace(/\bFlorida governor\b/g, whichTitle);
-	v = v.replace(/\bRepublican\b/g, "Fascist");
+	let whichTitle = Math.floor(Math.random() * titles.length);
+	let whichDesc = Math.floor(Math.random() * descriptions.length);
+	let whichTerm = Math.floor(Math.random() * terms.length);
+	
+	v = v.replace(/\bRon DeSantis’\b/g, names[whichRon] + "'s, " +descriptions[whichDesc] + ",");
+	v = v.replace(/\bDeSantis’\b/g, names[whichRon] + "'s, " +descriptions[whichDesc] + ",");
+	v = v.replace(/\bRon DeSantis'\b/g, names[whichRon] + "'s, " +descriptions[whichDesc] + ",");
+	v = v.replace(/\bDeSantis'\b/g, names[whichRon] + "'s, " +descriptions[whichDesc] + ",");
+	v = v.replace(/\bRon DeSantis\b/g, names[whichRon] + ", " +descriptions[whichDesc] + ",");
+	v = v.replace(/\bRon Desantis\b/g, names[whichRon] + ", " +descriptions[whichDesc] + ",");
+	v = v.replace(/\bDeSantis\b/g, names[whichRon]);
+	v = v.replace(/\bGovernor Ron DeSantis\b/g, titles[whichTitle]);
+	v = v.replace(/\bFlorida governor\b/g, titles[whichTitle]);
+	v = v.replace(/\bFlorida Gov\b/g, titles[whichTitle]);
+	v = v.replace(/\bRepublican\b/g, terms[whichTerm]);
 	textNode.nodeValue = v;
 }
 
