@@ -38,10 +38,10 @@ function walk(node)
 function handleText(textNode) 
 {
 	var v = textNode.nodeValue;
-	const names = ["Meatball Ron", "Tiny D", "Puddin' Fingers", "Ron DaDouche", "Ronda Santis, Drag Queen Extraordinaire", "Pretty Boots Ron"];
+	const names = ["Meatball Ron", "Tiny D", "Puddin' Fingers", "Gitmo Ron", "Ron DaDouche", "Ronda Santis, Drag Queen Extraordinaire", "Pretty Boots Ron"];
 	const titles = ["Florida Man", "Meth Wrangler", "Less Exciting Trump", "Psychopathic Swampman", "Florida Governor and sad little manchild"];
 	const descriptions = ["who thinks Gilead is a utopia", "who loves the poorly educated", "a boring Patrick Bateman", "man with the cutest wittle boots east of the Mississippi", "notorious Trump fellator", "Trump's FUPA rest"]
-	const terms = ["Fascist", "Hilter-Loving", "Neo-Nazi", "Putin-Fellator", "Pro-Slavery"];
+	const terms = ["Fascist", "Hilter-Loving", "Neo-Nazi", "Putin-Fellator", "Pro-Slavery", "KKK-Enthusiast"];
 	let whichRon = Math.floor(Math.random() * names.length);
 	let whichTitle = Math.floor(Math.random() * titles.length);
 	let whichDesc = Math.floor(Math.random() * descriptions.length);
